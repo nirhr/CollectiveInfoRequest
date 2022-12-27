@@ -23,37 +23,34 @@ function App() {
 			<header className="App-header">
 
                 { pageNum === 0 && (
-                    <div>
-                        <div className="image-container"> <img src={locationImage} alt="InfoReq"/></div>
-                        <button className="button-container"
-                            onClick={() => setPageNum(1)}>
-                            
-                        </button>
+                    <div className="image-container"> 
+                        <img 
+                            src={locationImage} 
+                            alt="InfoReq"
+                            onClick={() => setPageNum(1)}
+                        />
                     </div>
-                    
                 )}
 
                 { pageNum === 1 && (
-                    <div>
-                        <div className="image-container"> <img src={cameraImage} alt="InfoReq"/></div>
-                        <div>
-                        <button className="button-container"
-                            onClick={() => setPageNum(2)}>
-                            Confirm sharing your camera
-                        </button>
-
-                        </div>
+                    <div className="image-container"> 
+                        <img 
+                            src={cameraImage} 
+                            alt="InfoReq"
+                            onClick={() => setPageNum(2)}
+                        />
                     </div>
                 )}
 
                 { pageNum === 2 && (
-                    <div>
-                        <div className="image-container"> <img src={chatImage} alt="InfoReq"/></div>
-
+                    <div className="image-container"> 
+                        <img 
+                            src={chatImage} 
+                            alt="InfoReq"
+                            onClick={() => setPageNum(0)}
+                        />
                     </div>
                 )}
-
-                
 			</header>
 		</div>
 	);
